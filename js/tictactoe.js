@@ -77,16 +77,16 @@ function checkWinConditions(){
 
     // Here is the computer win conditions
 
-    if(arrayIncludes('0Y', '1Y', '2Y')){ drawWinLine(50,100,558,100) }
-    else if(arrayIncludes('3Y', '4Y', '5Y')){ drawWinLine(50,304,558,304) }
-    else if(arrayIncludes('6Y', '7Y', '8Y')){ drawWinLine(50,508,558,508) }
-    else if(arrayIncludes('0Y', '3Y', '6Y')){ drawWinLine(100,50,100,558) }
-    else if(arrayIncludes('1Y', '4Y', '7Y')){ drawWinLine(304,50,304,558) }
-    else if(arrayIncludes('2Y', '5Y', '8Y')){ drawWinLine(508,50,508,558) }
-    else if(arrayIncludes('6Y', '4Y', '2Y')){ drawWinLine(100,508,510,90) }
-    else if(arrayIncludes('0Y', '4Y', '8Y')){ drawWinLine(100,100,520,520) }
+    if(arrayIncludes('0O', '1O', '2O')){ drawWinLine(50,100,558,100) }
+    else if(arrayIncludes('3O', '4O', '5O')){ drawWinLine(50,304,558,304) }
+    else if(arrayIncludes('6O', '7O', '8O')){ drawWinLine(50,508,558,508) }
+    else if(arrayIncludes('0O', '3O', '6O')){ drawWinLine(100,50,100,558) }
+    else if(arrayIncludes('1O', '4O', '7O')){ drawWinLine(304,50,304,558) }
+    else if(arrayIncludes('2O', '5O', '8O')){ drawWinLine(508,50,508,558) }
+    else if(arrayIncludes('6O', '4O', '2O')){ drawWinLine(100,508,510,90) }
+    else if(arrayIncludes('0O', '4O', '8O')){ drawWinLine(100,100,520,520) }
     // If all squares have been played, audio will let you know
-    else if(selectedSquares.length >= 9){
+    else if(selectedSquares.length >= 9) {
         var audio = new Audio('/media/tie.mp3');
         audio.play();
 
@@ -145,7 +145,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         }
         if (x1 < x2 && y1 >= y2) {
             if (x < x2) { x+=10; }
-            if (y > y2) { y-+10; }
+            if (y > y2) { y-=10; }
             if (x >=x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
         }
     }
