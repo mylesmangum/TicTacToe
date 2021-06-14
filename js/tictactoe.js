@@ -87,10 +87,10 @@ function checkWinConditions(){
     else if(arrayIncludes('0O', '4O', '8O')){ drawWinLine(100,100,520,520) }
     // If all squares have been played, audio will let you know
     else if(selectedSquares.length >= 9) {
-        var audio = new Audio('/media/tie.mp3');
+        var audio = new Audio('./media/tie.mp3');
         audio.play();
 
-        setTimeout(function () { resetGame();}, 3000);
+        setTimeout(function () { resetGame();}, 1000);
     }
 
 }
